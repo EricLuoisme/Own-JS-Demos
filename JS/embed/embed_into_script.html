@@ -23,7 +23,7 @@
         alert(change)
 
         // obj -> similar to Java, obj is just a pointer, not deep copy
-        var obj = { name: 'smith3', age: 23}; // in JS, do not need to declare a structure -> just use it
+        var obj = { name: 'smith3', age: 23 }; // in JS, do not need to declare a structure -> just use it
         var obj_1 = new Object();
         obj_1.name = 'smith';
 
@@ -33,6 +33,9 @@
         console.log(obj_1.name) // smith2
         console.log(obj_2.name) // smith2
         console.log(obj.age)
+
+        // es6 logging -> similar to the String.format("%s",xxx) /  fmt.Print("%v", xxx)
+        console.log(`I am ${obj.name}, age ${obj.age} `)
 
     </script>
 </body>
