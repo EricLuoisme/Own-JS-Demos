@@ -35,7 +35,15 @@
         console.log(obj.age)
 
         // es6 logging -> similar to the String.format("%s",xxx) /  fmt.Print("%v", xxx)
-        console.log(`I am ${obj.name}, age ${obj.age} `)
+        console.log(`I am ${obj.name}, age ${obj.age} `);
+        
+        // could also concate function's return
+        console.log(`They also call me ${getName()}`)
+
+
+        function getName() {
+            return 'MyName';
+        }
 
     </script>
 </body>
