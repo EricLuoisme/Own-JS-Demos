@@ -18,8 +18,20 @@
         alert(num)
 
         // var (let as ES6, var as ES5)
-        let change = 123;
+        let change;
+        change = 296;
         alert(change)
+
+        // obj -> similar to Java, obj is just a pointer, not deep copy
+        var obj_1 = new Object();
+        obj_1.name = 'smith';
+
+        var obj_2 = obj_1;
+
+        obj_1.name = 'smith2';
+        console.log(obj_1.name) // smith2
+        console.log(obj_2.name) // smith2
+
     </script>
 </body>
 
