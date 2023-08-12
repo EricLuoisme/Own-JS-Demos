@@ -19,6 +19,28 @@
         var a = '110';
         var num = parseInt(a);
         console.log(num);
+
+        // conditions
+        const result1 = '';
+        const result2 = { a: 'data1', b: 'data2' };
+        const result3 = [];
+
+        if (result1) {
+            console.log('When result1 is empty, would not go into this part of coding');
+        }
+
+        if (result2 && result2.a) {
+            console.log('Only go into here, when result2 is not empty && result2 a param is alos not empty');
+        }
+
+        if (result3) {
+            console.log('But for empty array or empty obj{}, they are as true return');
+        }
+
+        if (isNaN('abc')) {
+            console.log('We can use isNaN to explicitly check whether a param is number format or not');
+        }
+
     </script>
 </body>
 
