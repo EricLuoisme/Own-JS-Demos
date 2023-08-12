@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script src='decimal.js'></script>
+    <script type="module">
+        import Decimal from './decimal.mjs';
+        console.log('Addition: ');
+        var a = 0.1;
+        var b = 0.2;
+        console.log(a + b);
+        console.log(new Decimal(a).add(new Decimal(b)).toNumber());
+    </script>
+</body>
+
+</html>
