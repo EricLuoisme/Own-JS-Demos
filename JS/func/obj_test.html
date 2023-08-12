@@ -21,9 +21,19 @@
                 console.log('Hello');
             }
         }
-        
+
         // this can call obj's function
         person.sayHi();
+
+
+        // default html funcs -> help us for creating html labels
+        var str = 'Hi all';
+        console.log(str.anchor()); // <a name="undefined">Hi all</a>
+        console.log(str.big()); // <big>Hi all</big>
+        console.log(str.sub()); // <sub>Hi all</sub>
+        console.log(str.sup()); // <sup>Hi all</sup>
+        console.log(str.link('http://www.baidu.com')); // <a href="http://www.baidu.com">Hi all</a>
+        console.log(str.bold()); // <b>Hi all</b>
 
 
     </script>
