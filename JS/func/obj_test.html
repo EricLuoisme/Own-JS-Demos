@@ -35,6 +35,12 @@
         console.log(str.link('http://www.baidu.com')); // <a href="http://www.baidu.com">Hi all</a>
         console.log(str.bold()); // <b>Hi all</b>
 
+        // url encoding
+        var url = "http://www.google.com/ncr/";
+        var str = encodeURIComponent(url);
+        console.log(str);
+        console.log(decodeURIComponent(str));
+
 
     </script>
 </body>
