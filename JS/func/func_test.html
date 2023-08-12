@@ -15,6 +15,21 @@
         }
         foo();
 
+        // es6 func calling
+        var obj1 = {
+            nickName: 'haha',
+            age: 24,
+        };
+
+        function fn1(a, b) {
+            console.log(this);
+            console.log(this.nickName);
+            console.log(a + b);
+        }
+        
+        // let this -> obj1, then call fn1() func
+        fn1.call(obj1, 2, 4);
+
         // type conversion
         var a = '110';
         var num = parseInt(a);
