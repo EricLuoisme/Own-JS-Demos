@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta >
+    <meta >
+    <meta >
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="button" value="Button_1" />
+    <input type="button" value="Button_2" />
+    <input type="button" value="Button_3" />
+    <input type="button" value="Button_4" />
+
+    <script>
+        var myBtn = document.getElementsByTagName('input');
+        
+        // rather than using 'var' -> 'let' would exactly be using as we call it
+        for (let i = 0; i < myBtn.length; i++) {
+            myBtn[i].onclick = function () {
+                alert(i);
+            };
+        }
+
+    </script>
+</body>
+
+</html>
