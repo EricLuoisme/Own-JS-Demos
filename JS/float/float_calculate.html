@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script src='decimal.js'></script>
+    <script type="module">
+        
+        // by using decimal.mjs dependency -> the floating point's calculation become correcteds
+        import Decimal from './decimal.mjs';
+        console.log('Addition: ');
+        var a = 0.1;
+        var b = 0.2;
+        console.log(a + b); // 0.30000000000000004
+        console.log(new Decimal(a).add(new Decimal(b)).toNumber()); // 0.3
+
+        console.log('Subtraction:');
+        var a = 1.0;
+        var b = 0.7;
+        console.log(a - b);
+        console.log(new Decimal(a).sub(new Decimal(b)).toNumber());
+
+        console.log('Multify');
+        var a = 1.01;
+        var b = 1.003;
+        console.log(a * b);
+        console.log(new Decimal(a).mul(new Decimal(b)).toNumber());
+
+        console.log('Deviation');
+        var a = 0.029;
+        var b = 10;
+        console.log(a / b);
+        console.log(new Decimal(a).div(new Decimal(b)).toNumber());
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // func -> with default input
+        function foo(name = 'yes') {
+            console.log(name);
+        }
+        foo();
+
+        // es6 func calling
+        var obj1 = {
+            nickName: 'haha',
+            age: 24,
+        };
+
+        function fn1(a, b) {
+            console.log(this);
+            console.log(this.nickName);
+            console.log(a + b);
+        }
+        
+        // let this -> obj1, then call fn1() func
+        fn1.call(obj1, 2, 4);
+
+        // type conversion
+        var a = '110';
+        var num = parseInt(a);
+        console.log(num);
+
+        // conditions
+        const result1 = '';
+        const result2 = { a: 'data1', b: 'data2' };
+        const result3 = [];
+
+        if (result1) {
+            console.log('When result1 is empty, would not go into this part of coding');
+        }
+
+        if (result2 && result2.a) {
+            console.log('Only go into here, when result2 is not empty && result2 a param is alos not empty');
+        }
+
+        if (result3) {
+            console.log('But for empty array or empty obj{}, they are as true return');
+        }
+
+        if (isNaN('abc')) {
+            console.log('We can use isNaN to explicitly check whether a param is number format or not');
+        }
+
+    </script>
+</body>
+
+</html>

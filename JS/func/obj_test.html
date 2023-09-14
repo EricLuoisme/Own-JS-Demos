@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        // in JS, all custom objs' params are: Key-Value pairs
+        // even add function is allowed
+        const person = {
+            name: 'hey',
+            age: 30,
+            sex: 'boy',
+            favor: ['reading', 'cycling'],
+            sayHi: function () {
+                console.log('Hello');
+            }
+        }
+
+        // this can call obj's function
+        person.sayHi();
+
+
+        // default html funcs -> help us for creating html labels
+        var str = 'Hi all';
+        console.log(str.anchor()); // <a name="undefined">Hi all</a>
+        console.log(str.big()); // <big>Hi all</big>
+        console.log(str.sub()); // <sub>Hi all</sub>
+        console.log(str.sup()); // <sup>Hi all</sup>
+        console.log(str.link('http://www.baidu.com')); // <a href="http://www.baidu.com">Hi all</a>
+        console.log(str.bold()); // <b>Hi all</b>
+
+        // url encoding
+        var url = "http://www.google.com/ncr/";
+        var str = encodeURIComponent(url);
+        console.log(str);
+        console.log(decodeURIComponent(str));
+
+        // get timestamp
+        console.log(Date.now());
+
+        // use JSON to string format array
+        console.log(JSON.stringify(new Array(15, 16, 17)));
+
+
+    </script>
+</body>
+
+</html>
