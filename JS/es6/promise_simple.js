@@ -12,11 +12,23 @@ const myPromise = new Promise((resolve, reject) => {
     }, 2000);
 });
 
-// Using the Promise
-myPromise
-    .then((successMsg) => {
+// // Using the Promise
+// myPromise
+//     .then((successMsg) => {
+//         console.log('Success:', successMsg);
+//     })
+//     .catch((error) => {
+//         console.log('Error:', error.message);
+//     });
+
+// Using Async
+async function handleMyPromise() {
+    try {
+        const successMsg = await myPromise;
         console.log('Success:', successMsg);
-    })
-    .catch((error) => {
+    } catch (error) {
         console.log('Error:', error.message);
-    });
+    }
+}
+// call the async function
+handleMyPromise();
